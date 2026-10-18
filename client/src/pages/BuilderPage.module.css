@@ -1,0 +1,6 @@
+.pageContent {
+  padding-top: var(--nav-height);
+  margin: 0 auto;
+  width: 120rem;
+  text-align: center;
+}

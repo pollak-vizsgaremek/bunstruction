@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  /* align-items: center; */
+  /* align-self: center; */
+  /* align-content: center; */
+  justify-content: center;
+  /* border: 3px solid var(--color-form-dark); */
+  /* border-radius: 6px; */
+  /* padding: 20px 0; */
+}
+
+.logButton,
+.regButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--color-orange-lightest);
+  background-color: var(--color-form-dark);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: auto;
+  border: 3px solid var(--color-form-dark);
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.logButton {
+  /* border-top-left-radius: 6px; */
+  /* border-bottom-left-radius: 6px; */
+  border-radius: 6px 0 0 6px;
+}
+
+.regButton {
+  /* border-top-right-radius: 6px; */
+  /* border-bottom-right-radius: 6px; */
+  border-radius: 0 6px 6px 0;
+}
+
+.selectedButton {
+  color: var(--color-white);
+  background-color: var(--color-form);
+}
+
+.dot {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.selectedDot {
+  background: #e8590c;
+}

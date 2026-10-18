@@ -2,8 +2,8 @@ import classes from "./CartPage.module.css";
 
 function CartPage() {
   return (
-    <div>
-      <p>CART PAGE</p>
+    <div className={classes.pageContent}>
+      <div>CART PAGE</div>
     </div>
   );
 }

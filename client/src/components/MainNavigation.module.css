@@ -1,0 +1,142 @@
+.header {
+  width: 100vw;
+  height: var(--nav-height);
+  border-bottom: 1px solid var(--color-gray-lighter);
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  /* right: 0; */
+  z-index: 99;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* width: 100vw; */
+  /* height: 6.4rem; */
+  padding: 1.4rem;
+}
+
+.headerBrand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.headerLogo {
+  height: 4rem;
+  /* width: auto; */
+  /* object-fit: contain; */
+}
+
+.brandName {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.brandHighlight {
+  color: var(--color-orange);
+  margin-right: 0.4rem;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  margin: 0 1.4rem;
+}
+
+.navLink:link,
+.navLink:visited,
+.navButton {
+  color: var(--color-orange-lightest);
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  transition: all 0.2s ease;
+}
+
+.navLink:hover,
+.navLink:active,
+.navButton:hover {
+  color: var(--color-white);
+}
+
+.headerActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.cartLink:link,
+.cartLink:visited,
+.profileIcon:link,
+.profileIcon:visited {
+  position: relative;
+  color: var(--color-orange-lightest);
+  transition: all 0.2s ease;
+}
+
+.cartLink:hover,
+.cartLink:active,
+.profileIcon:hover,
+.profileIcon:active {
+  color: var(--color-white);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  left: 16px;
+
+  /* min-width: 3rem; */
+  /* min-height: 2rem; */
+  padding: 0.3rem 0.6rem;
+  /* padding: 0.6rem; */
+
+  border-radius: 6px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive */
+/* @media (min-width: 768px) {
+  .headerContainer {
+    padding: 0 2.4rem;
+  }
+
+  .navMenu {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerContainer {
+    padding-right: 4.8rem;
+    padding-left: 4.8rem;
+  }
+
+  .navMenu {
+    gap: 3.2rem;
+  }
+} */
