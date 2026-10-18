@@ -1,0 +1,38 @@
+CREATE DATABASE bunstruction_db
+ENCODING 'UTF8';
+
+-- UNACCENT BŐVÍTMÉNY ENGEDÉLYEZÉSE (ÉKEZETMENTES KERESÉS)
+CREATE EXTENSION IF NOT EXISTS unaccent;
+
+CREATE TABLE users (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  first_name VARCHAR NOT NULL,
+  last_name VARCHAR NOT NULL,  
+  email VARCHAR UNIQUE NOT NULL,
+  password_hash VARCHAR NOT NULL
+);
+
+CREATE TABLE roles (
+  id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  role_name VARCHAR UNIQUE NOT NULL
+);
+
+CREATE TABLE user_roles (
+  user_id INT NOT NULL,
+  role_id INT NOT NULL,
+
+  PRIMARY KEY(user_id, role_id),
+
+  FOREIGN KEY(user_id)
+  REFERENCES users(id)
+  ON DELETE CASCADE,
+
+  FOREIGN KEY(role_id)
+  REFERENCES roles(id)
+  ON DELETE CASCADE
+);
+
+INSERT INTO roles (name)
+VALUES
+  ('admin'),
+  ('user');
